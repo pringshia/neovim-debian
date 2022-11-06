@@ -1,0 +1,13 @@
+services:
+  dev:
+    build: .
+    environment:
+      - TERM
+      - COLORTERM
+      - LC_ALL=C.UTF-8
+        #    volumes:
+      #      - /Users/tikir/Code:/code
+    ports:
+      - "13000-13010:3000-3010"
+      - "18000:8000"
+      - "18080:8080"
