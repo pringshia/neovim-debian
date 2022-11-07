@@ -22,5 +22,8 @@ RUN cp -R /tmp/.config/nvim $HOME/.config/
 
 COPY entrypoint.sh /tmp/entrypoint.sh
 
-# ENTRYPOINT bash -ic /tmp/entrypoint.sh && bash 
+# This let's us categorically avoid running treesitter
+# setup, until we make language support configurable
+ENV NVP_SKIP_DEV=1
+
 ENTRYPOINT bash /tmp/entrypoint.sh && bash
