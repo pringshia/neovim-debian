@@ -1,4 +1,4 @@
-An attempt to build Neovim from source in Docker from a Debian-based container.
+Neovim built from source and setup with my custom config, in a Debian-based Docker container.
 
 ---
 
